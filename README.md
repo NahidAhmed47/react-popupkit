@@ -26,41 +26,35 @@ To start using react popupkit you just need to import the component from the rea
 import Popup from 'react-popupkit'
 ```
 
-Call the component where you want to use and make popup button
+Call the component where you want to use and make popup button:
 
 ```jsx
-import React from 'react';
-import Popup from 'react-popupkit';
-
-export const App = () => (
-  return(
+export const App = () => {
+  return (
     <Popup>
-      <Popup.Button> {/* your custom styles inside <Popup.Button> component */}
-      {/* button content will be here */}
+      <Popup.Button {/* custom styles inside <Popup.Button> component */}>
+        {/* button content will be here */}
       </Popup.Button>
     </Popup>
   )
-);
+}
 ```
 
-Setup popup body as with your custom styles. (The package no styles provided)
+Setup popup body as with your custom styles. (The package no styles provided):
 
 ```jsx
-import React from 'react';
-import Popup from 'react-popupkit';
-
-export const App = () => (
-  return(
+export const App = () => {
+  return (
     <Popup>
-      <Popup.Button> {/* your custom styles inside <Popup.Button> component */}
-      {/* button content will be here */}
+      <Popup.Button {/* custom styles inside <Popup.Button> component */}>
+        {/* button content will be here */}
       </Popup.Button>
       <Popup.Body>
-        {/* Body content goes here with your custom styles */}
+       {/* Body content goes here with your custom styles */}
       </Popup.Body>
     </Popup>
   )
-);
+}
 ```
 
 Great! you're done.
@@ -68,9 +62,6 @@ Great! you're done.
 ## Example
 
 ```jsx
-import React from 'react'
-import Popup from 'react-popupkit'
-
 export const App = () => {
   return (
     <Popup>
@@ -99,9 +90,54 @@ export const App = () => {
 }
 ```
 
+## If needed
+
+If you want to close depends on a specific event then you can do it by provided hook:
+
+```jsx
+import { useClosePopup } from 'react-popupkit'
+
+export const App = () => {
+  // get close function by using useClosePopup() from react-popupkit
+  const closePopup = useClosePopup()
+  useEffect(() => {
+    // simple api fetch data
+    const userData = async () => {
+      const res = await fetch(`url_here`)
+      const data = await res.json()
+      if (data.success) {
+        // popup close after successfully fetch data
+        closePopup()
+      }
+    }
+  }, [])
+  return {
+    /* ...codes */
+  }
+}
+```
+
+## Custom state handling
+
+If you want to use in many place of this popup state. Then you can check below example:
+
+```jsx
+export const App = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState()
+  return (
+    <div>
+      <Popup isOpen={isPopupOpen} setIsOpen={setIsPopupOpen}>
+        {/* ...codes */}
+      </Popup>
+      {/* handling others thing by depend on Popup state */}
+      {isPopupOpen && <p>Popup is open!</p>}
+    </div>
+  )
+}
+```
+
 ## Features
 
-- Declarative API
 - Composed Structure
 - Customization
 - Flexibility
@@ -110,13 +146,13 @@ export const App = () => {
 
 - Import the Popup component.
 - Wrap your popup content and button.
-- Customize using props and classNames.
+- Set styles for design.
 
 ## Advanced Usage
 
-- Include Popup.TriggerClose.
+- Include Popup.TriggerClose for close after click any item into the popup.
 - Use conditional rendering or props.
-- Explore state management or context.
+- Control close popup by useClosePopup() hooks.
 
 ## Licence
 
