@@ -12,6 +12,12 @@ This package is available in NPM repository as react-popupkit. It will work corr
 npm install react-popupkit
 ```
 
+or
+
+```bash
+yarn add react-popupkit
+```
+
 ## Quick Demo
 
 To start using react popupkit you just need to import the component from the react-popupkit package.
@@ -46,7 +52,7 @@ import Popup from 'react-popupkit';
 export const App = () => (
   return(
     <Popup>
-      <Popup.Button> {/* your custom styles goes here */}
+      <Popup.Button> {/* your custom styles inside <Popup.Button> component */}
       {/* button content will be here */}
       </Popup.Button>
       <Popup.Body>

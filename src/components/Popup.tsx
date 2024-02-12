@@ -2,6 +2,8 @@ import React, { ReactNode, createContext, useCallback, useContext, useEffect, us
 
 type TPopupProps = {
   children: ReactNode
+  isOpen?: boolean
+  setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 type TPopupButtonProps = {
@@ -28,8 +30,8 @@ type TTriggerCloseProps = {
 // create context
 const PopupContext = createContext<TContextValues | null>(null)
 
-const Popup = ({ children }: TPopupProps) => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
+const Popup = ({ children, isOpen, setIsOpen }: TPopupProps) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(isOpen || false)
   // === REF ===
   const popupRef = useRef<HTMLDivElement>(null)
   const popupButtonRef = useRef<HTMLButtonElement>(null)
@@ -44,10 +46,15 @@ const Popup = ({ children }: TPopupProps) => {
         !popupButtonRef.current.contains(e.target as Node)
       ) {
         setIsPopupOpen(false)
+        setIsOpen && setIsOpen(false)
       }
     },
-    [setIsPopupOpen],
+    [setIsPopupOpen, setIsOpen],
   )
+
+  useEffect(() => {
+    setIsOpen && setIsOpen(isPopupOpen)
+  }, [isPopupOpen, setIsOpen])
 
   // Attach event listener when the component mounts
   useEffect(() => {
@@ -68,6 +75,7 @@ const Popup = ({ children }: TPopupProps) => {
     <PopupContext.Provider value={contextValue}>
       <div className='' onClick={handleOutsideClose}>
         {children}
+        <div id='close-container'></div>
       </div>
     </PopupContext.Provider>
   )
@@ -121,7 +129,7 @@ const TriggerClose = ({ children }: TTriggerCloseProps) => {
 Popup.TriggerClose = TriggerClose
 
 export const useClosePopup = () => {
-  return () => document.getElementById('trigger-close')?.click()
+  return () => document.getElementById('close-container')?.click()
 }
 
 const usePopupContext = () => {
