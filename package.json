@@ -1,13 +1,13 @@
 {
-  "name": "react-popupify",
-  "version": "1.0.1",
+  "name": "react-popupkit",
+  "version": "1.0.0",
   "description": "",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NahidAhmed47/react-popupify.git"
+    "url": "git+https://github.com/NahidAhmed47/react-popupkit.git"
   },
   "files": [
     "dist",
@@ -25,11 +25,12 @@
   },
   "keywords": [
     "react",
-    "react-popupify",
+    "react-popupkit",
     "react-popup",
     "popup",
     "modal",
-    "tooltip"
+    "tooltip",
+    "react"
   ],
   "author": "nahid_ahmed",
   "license": "MIT",
