@@ -4,17 +4,68 @@
 
 A lightweight and easy-to-use React component for creating functional popups without managing state or additional functions.
 
-## Features
+## Installation
 
-- Declarative API
-- Composed Structure
-- Customization
-- Flexibility
+This package is available in NPM repository as react-popupkit. It will work correctly with all popular bundlers.
+
+```bash
+npm install react-popupkit
+```
 
 ## Quick Demo
 
+To start using react popupkit you just need to import the component from the react-popupkit package.
+
 ```jsx
-import Popup from 'react-popupify'
+import Popup from 'react-popupkit'
+```
+
+Call the component where you want to use and make popup button
+
+```jsx
+import React from 'react';
+import Popup from 'react-popupkit';
+
+export const App = () => (
+  return(
+    <Popup>
+      <Popup.Button> {/* your custom styles goes here */}
+      {/* button content will be here */}
+      </Popup.Button>
+    </Popup>
+  )
+);
+```
+
+Setup popup body as with your custom styles. (The package no styles provided)
+
+Call the component where you want to use and make popup button
+
+```jsx
+import React from 'react';
+import Popup from 'react-popupkit';
+
+export const App = () => (
+  return(
+    <Popup>
+      <Popup.Button> {/* your custom styles goes here */}
+      {/* button content will be here */}
+      </Popup.Button>
+      <Popup.Body>
+        {/* Body content goes here */}
+      </Popup.Body>
+    </Popup>
+  )
+);
+```
+
+Great! you're done.
+
+## Example
+
+```jsx
+import React from 'react'
+import Popup from 'react-popupkit'
 
 export const App = () => {
   return (
@@ -44,11 +95,12 @@ export const App = () => {
 }
 ```
 
-## Installation
+## Features
 
-```bash
-    npm install react-popupify
-```
+- Declarative API
+- Composed Structure
+- Customization
+- Flexibility
 
 ## Basic Usage
 
