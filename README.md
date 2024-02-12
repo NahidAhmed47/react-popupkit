@@ -1,4 +1,4 @@
-# react-popupify
+# react-popupkit
 
 ## Description
 
@@ -29,7 +29,7 @@ import Popup from 'react-popupkit';
 export const App = () => (
   return(
     <Popup>
-      <Popup.Button> {/* your custom styles goes here */}
+      <Popup.Button> {/* your custom styles inside <Popup.Button> component */}
       {/* button content will be here */}
       </Popup.Button>
     </Popup>
@@ -38,8 +38,6 @@ export const App = () => (
 ```
 
 Setup popup body as with your custom styles. (The package no styles provided)
-
-Call the component where you want to use and make popup button
 
 ```jsx
 import React from 'react';
@@ -52,7 +50,7 @@ export const App = () => (
       {/* button content will be here */}
       </Popup.Button>
       <Popup.Body>
-        {/* Body content goes here */}
+        {/* Body content goes here with your custom styles */}
       </Popup.Body>
     </Popup>
   )
