@@ -174,11 +174,11 @@ export const App = () => {
         <a href="https://nahid-ahmed.netlify.app/" target="_blank">
           <img width="150" height="150" src="https://avatars.githubusercontent.com/u/121648135?s=400&u=bacda54a66f53fa97ff1258b5abb989454a31f7e&v=4">
           </br>
-         Nahid Ahmed
         </a>
+        <p>Nahid Ahmed</p>
         <div>
           <a href="https://www.linkedin.com/in/nahid-ahmed-281901212/" target="_blank">
-            <img src="https://img.shields.io/twitter/follow/ElaziziYoussouf.svg?style=social&label=Follow" />
+            <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
           </a>
         </div>
       </td>
