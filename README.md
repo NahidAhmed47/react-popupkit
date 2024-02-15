@@ -9,7 +9,7 @@ A lightweight and easy-to-use `React component` for creating functional popups w
 - **✅ Easy to use 🚀**
 - **✅ TypeScript Support 👌**
 - **✅ State and functions fully accessible**
-- **✅ No default styles provided. It's depend on you 👌 (js, CSS, styled-components)**
+- **✅ No default styles are provided. It's depend on you 👌 (js, CSS, styled-components)**
 - **✅ Very tiny library (2.14kb) ⚡️**
 
 ## Installation
@@ -164,3 +164,24 @@ export const App = () => {
 ## Licence
 
 - MIT
+
+## Maintainers
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://nahid-ahmed.netlify.app/" target="_blank">
+          <img width="150" height="150" src="https://avatars.githubusercontent.com/u/121648135?s=400&u=bacda54a66f53fa97ff1258b5abb989454a31f7e&v=4">
+          </br>
+         Nahid Ahmed
+        </a>
+        <div>
+          <a href="https://www.linkedin.com/in/nahid-ahmed-281901212/" target="_blank">
+            <img src="https://img.shields.io/twitter/follow/ElaziziYoussouf.svg?style=social&label=Follow" />
+          </a>
+        </div>
+      </td>
+    </tr>
+  <tbody>
+</table>
