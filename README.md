@@ -2,7 +2,7 @@
 
 ## Description
 
-A lightweight and easy-to-use React component for creating functional popups without managing state or additional functions.
+A lightweight and easy-to-use React component for creating functional popups without manual managing state or additional function handling. just call the component, apply your styles, and enjoy optimized magical popups.
 
 ## Installation
 
@@ -90,6 +90,8 @@ export const App = () => {
 }
 ```
 
+- Note: If you use next.js 13 or above (App router) then please make sure use `use client` in the top of the file.
+
 ## If needed
 
 If you want to close depends on a specific event then you can do it by provided hook:
@@ -135,6 +137,15 @@ export const App = () => {
   )
 }
 ```
+
+## Usable Components
+
+| Name                                        | Description                                                    |
+| ------------------------------------------- | -------------------------------------------------------------- |
+| `<Popup></Popup>`                           | Parent wrapper component.                                      |
+| `<Popup.Button></Popup.Button>`             | Make the button for click to open popup.                       |
+| `<Popup.Body></Popup.Body>`                 | Wrap by body component of the desired popup contents           |
+| `<Popup.TriggerClose></Popup.TriggerClose>` | Wrap the item which one you want to close popup after clicked. |
 
 ## Features
 
