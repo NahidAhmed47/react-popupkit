@@ -2,11 +2,19 @@
 
 ## Description
 
-A lightweight and easy-to-use React component for creating functional popups without manual managing state or additional function handling. just call the component, apply your styles, and enjoy optimized magical popups.
+A lightweight and easy-to-use `React component` for creating functional popups without manual managing `state` or additional `function` handling. just call the `component`, apply your `styles`, and enjoy optimized magical `popups`.
+
+## Features
+
+- **✅ Easy to use 🚀**
+- **✅ TypeScript Support 👌**
+- **✅ State and functions fully accessible**
+- **✅ No default styles provided. It's depend on you 👌 (js, CSS, styled-components)**
+- **✅ Very tiny library (2.14kb) ⚡️**
 
 ## Installation
 
-This package is available in NPM repository as react-popupkit. It will work correctly with all popular bundlers.
+This package is available in NPM repository as `react-popupkit`. It will work correctly with all popular bundlers.
 
 ```bash
 npm install react-popupkit
@@ -146,18 +154,6 @@ export const App = () => {
 | `<Popup.Button></Popup.Button>`             | Make the button for click to open popup.                       |
 | `<Popup.Body></Popup.Body>`                 | Wrap by body component of the desired popup contents           |
 | `<Popup.TriggerClose></Popup.TriggerClose>` | Wrap the item which one you want to close popup after clicked. |
-
-## Features
-
-- Composed Structure
-- Customization
-- Flexibility
-
-## Basic Usage
-
-- Import the Popup component.
-- Wrap your popup content and button.
-- Set styles for design.
 
 ## Advanced Usage
 
