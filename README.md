@@ -148,12 +148,12 @@ export const App = () => {
 
 ## Usable Components
 
-| Name                                        | Description                                                    |
-| ------------------------------------------- | -------------------------------------------------------------- |
-| `<Popup></Popup>`                           | Parent wrapper component.                                      |
-| `<Popup.Button></Popup.Button>`             | Make the button for click to open popup.                       |
-| `<Popup.Body></Popup.Body>`                 | Wrap by body component of the desired popup contents           |
-| `<Popup.TriggerClose></Popup.TriggerClose>` | Wrap the item to which one you want to close the popup after clicking. |
+| Name                                        | Value                             | Description                                                            |
+| ------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------- |
+| `<Popup></Popup>`                           | Others components as a `children` | Parent wrapper component.                                              |
+| `<Popup.Button></Popup.Button>`             | `children`                        | Make the button for click to open popup.                               |
+| `<Popup.Body></Popup.Body>`                 | `children`                        | Wrap by body component of the desired popup contents                   |
+| `<Popup.TriggerClose></Popup.TriggerClose>` | `children`                        | Wrap the item to which one you want to close the popup after clicking. |
 
 ## Props and hooks
 
