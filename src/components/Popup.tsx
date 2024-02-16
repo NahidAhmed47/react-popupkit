@@ -78,7 +78,6 @@ const Popup = ({ children, isOpen, setIsOpen, ...args }: TPopupProps) => {
     <PopupContext.Provider value={contextValue}>
       <div {...args} onClick={handleOutsideClose}>
         {children}
-        <div id='close-container'></div>
       </div>
     </PopupContext.Provider>
   )
@@ -105,13 +104,17 @@ Popup.Button = PopupButton
 
 // make popup body component
 const PopupBody = ({ children, ...args }: TPopupBody) => {
-  const { popupRef, isPopupOpen } = usePopupContext()
+  const { popupRef, isPopupOpen, setIsPopupOpen } = usePopupContext()
   return (
     <>
       {isPopupOpen && (
-        <div {...args} ref={popupRef}>
-          {children}
-        </div>
+        <>
+          <div {...args} ref={popupRef}>
+            {children}
+          </div>
+          {/* this element for close by hook */}
+          <span id='close-container' onClick={() => setIsPopupOpen(false)}></span>
+        </>
       )}
     </>
   )
