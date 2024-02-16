@@ -17,7 +17,7 @@ A lightweight and easy-to-use `React component` for creating functional `popup` 
 This package is available in NPM repository as `react-popupkit`. It will work correctly with all popular bundlers.
 
 ```bash
-npm install react-popupkit
+npm install react-popupkit --save
 ```
 
 or
