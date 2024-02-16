@@ -2,11 +2,19 @@
 
 ## Description
 
-A lightweight and easy-to-use React component for creating functional popups without managing state or additional functions.
+A lightweight and easy-to-use `React component` for creating functional `popup` without manual managing `state` or additional `function` handling. just call the `component`, apply your `styles`, and enjoy optimized magical `popup`.
+
+## Features
+
+- **✅ Easy to use 🚀**
+- **✅ TypeScript Support 👌**
+- **✅ State and functions fully accessible**
+- **✅ No default styles are provided. It's depend on you 👌 (js, CSS, styled-components)**
+- **✅ Very tiny library (2.14kb) ⚡️**
 
 ## Installation
 
-This package is available in NPM repository as react-popupkit. It will work correctly with all popular bundlers.
+This package is available in NPM repository as `react-popupkit`. It will work correctly with all popular bundlers.
 
 ```bash
 npm install react-popupkit
@@ -20,13 +28,13 @@ yarn add react-popupkit
 
 ## Quick Demo
 
-To start using react popupkit you just need to import the component from the react-popupkit package.
+Step 01: To start using `react-popupkit`, you just need to import the component from the `react-popupkit` package.
 
 ```jsx
 import Popup from 'react-popupkit'
 ```
 
-Call the component where you want to use and make popup button:
+Step 02: Call the component where you want to use and make popup button:
 
 ```jsx
 export const App = () => {
@@ -40,7 +48,7 @@ export const App = () => {
 }
 ```
 
-Setup popup body as with your custom styles. (The package no styles provided):
+Step 03: Call the popup body component with your custom styles and take all contents inside the body component. (The package has no styles provided):
 
 ```jsx
 export const App = () => {
@@ -90,9 +98,11 @@ export const App = () => {
 }
 ```
 
-## If needed
+- Note: If you use next.js 13 or above (App router) then please make sure use `use client` in the top of the file.
 
-If you want to close depends on a specific event then you can do it by provided hook:
+## Hooks with example
+
+If you want to close depends on a specific event then you can do it by `useClosePopup()` hook:
 
 ```jsx
 import { useClosePopup } from 'react-popupkit'
@@ -136,17 +146,22 @@ export const App = () => {
 }
 ```
 
-## Features
+## Usable Components
 
-- Composed Structure
-- Customization
-- Flexibility
+| Name                                        | Value                             | Description                                                            |
+| ------------------------------------------- | --------------------------------- | ---------------------------------------------------------------------- |
+| `<Popup></Popup>`                           | Others components as a `children` | Parent wrapper component.                                              |
+| `<Popup.Button></Popup.Button>`             | `children`                        | Make the button for click to open popup.                               |
+| `<Popup.Body></Popup.Body>`                 | `children`                        | Wrap by body component of the desired popup contents                   |
+| `<Popup.TriggerClose></Popup.TriggerClose>` | `children`                        | Wrap the item to which one you want to close the popup after clicking. |
 
-## Basic Usage
+## Props and hooks
 
-- Import the Popup component.
-- Wrap your popup content and button.
-- Set styles for design.
+| Name              | Value      | Description                                                                     |
+| ----------------- | ---------- | ------------------------------------------------------------------------------- |
+| `useClosePopup()` | null       | Get access of popup close from anywhere of this component.                      |
+| `isOpen`          | `boolean`  | When handle custom state then use this in the `<Popup>` component.              |
+| `setIsOpen`       | `function` | Receive a function that handle state change and use in the `<Popup>` component. |
 
 ## Advanced Usage
 
@@ -157,3 +172,24 @@ export const App = () => {
 ## Licence
 
 - MIT
+
+## Maintainers
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://nahid-ahmed.netlify.app/" target="_blank">
+          <img width="150" height="150" src="https://avatars.githubusercontent.com/u/121648135?s=400&u=bacda54a66f53fa97ff1258b5abb989454a31f7e&v=4">
+          </br>
+        </a>
+        <p>Nahid Ahmed</p>
+        <div>
+          <a href="https://www.linkedin.com/in/nahid-ahmed-281901212/" target="_blank">
+            <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+          </a>
+        </div>
+      </td>
+    </tr>
+  <tbody>
+</table>
