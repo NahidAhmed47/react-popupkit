@@ -2,7 +2,7 @@
 
 ## Description
 
-A lightweight and easy-to-use `React component` for creating functional popups without manual managing `state` or additional `function` handling. just call the `component`, apply your `styles`, and enjoy optimized magical `popups`.
+A lightweight and easy-to-use `React component` for creating functional `popup` without manual managing `state` or additional `function` handling. just call the `component`, apply your `styles`, and enjoy optimized magical `popup`.
 
 ## Features
 
@@ -28,13 +28,13 @@ yarn add react-popupkit
 
 ## Quick Demo
 
-To start using react popupkit you just need to import the component from the react-popupkit package.
+Step 01: To start using `react-popupkit`, you just need to import the component from the `react-popupkit` package.
 
 ```jsx
 import Popup from 'react-popupkit'
 ```
 
-Call the component where you want to use and make popup button:
+Step 02: Call the component where you want to use and make popup button:
 
 ```jsx
 export const App = () => {
@@ -48,7 +48,7 @@ export const App = () => {
 }
 ```
 
-Setup popup body as with your custom styles. (The package no styles provided):
+Step 03: Call the popup body component with your custom styles and take all contents inside the body component. (The package has no styles provided):
 
 ```jsx
 export const App = () => {
@@ -100,9 +100,9 @@ export const App = () => {
 
 - Note: If you use next.js 13 or above (App router) then please make sure use `use client` in the top of the file.
 
-## If needed
+## Hooks with example
 
-If you want to close depends on a specific event then you can do it by provided hook:
+If you want to close depends on a specific event then you can do it by `useClosePopup()` hook:
 
 ```jsx
 import { useClosePopup } from 'react-popupkit'
@@ -153,7 +153,15 @@ export const App = () => {
 | `<Popup></Popup>`                           | Parent wrapper component.                                      |
 | `<Popup.Button></Popup.Button>`             | Make the button for click to open popup.                       |
 | `<Popup.Body></Popup.Body>`                 | Wrap by body component of the desired popup contents           |
-| `<Popup.TriggerClose></Popup.TriggerClose>` | Wrap the item which one you want to close popup after clicked. |
+| `<Popup.TriggerClose></Popup.TriggerClose>` | Wrap the item to which one you want to close the popup after clicking. |
+
+## Props and hooks
+
+| Name              | Value      | Description                                                                     |
+| ----------------- | ---------- | ------------------------------------------------------------------------------- |
+| `useClosePopup()` | null       | Get access of popup close from anywhere of this component.                      |
+| `isOpen`          | `boolean`  | When handle custom state then use this in the `<Popup>` component.              |
+| `setIsOpen`       | `function` | Receive a function that handle state change and use in the `<Popup>` component. |
 
 ## Advanced Usage
 
