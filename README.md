@@ -38,7 +38,6 @@ export const App = () => {
   return (
     <Popup>
       <Popup.Button>
-        {' '}
         {/* set styles inside <Popup.Button> component */}
         {/* button content will be here */}
       </Popup.Button>
@@ -57,7 +56,9 @@ export const App = () => {
         {/* set styles inside <Popup.Button> component */}
         {/* button content will be here */}
       </Popup.Button>
-      <Popup.Body>{/* Body content goes here with your custom styles */}</Popup.Body>
+      <Popup.Body>
+        {/* Body content goes here with your custom styles */}
+      </Popup.Body>
     </Popup>
   )
 }
