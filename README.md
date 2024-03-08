@@ -155,11 +155,13 @@ export const App = () => {
 
 ## Props and hooks
 
-| Name              | Value      | Description                                                                     |
-| ----------------- | ---------- | ------------------------------------------------------------------------------- |
-| `useClosePopup()` | null       | Get access of popup close from anywhere of this component.                      |
-| `isOpen`          | `boolean`  | When handle custom state then use this in the `<Popup>` component.              |
-| `setIsOpen`       | `function` | Receive a function that handle state change and use in the `<Popup>` component. |
+| Name              | Value      | Required | Description                                                                     |
+| ----------------- | ---------- | -------- | ------------------------------------------------------------------------------- |
+| `useClosePopup()` | `null`     | No       | Get access of popup close from anywhere of this component.                      |
+| `isOpen`          | `boolean`  | No       | When handle custom state then use this in the `<Popup>` component.              |
+| `setIsOpen`       | `function` | No       | Receive a function that handle state change and use in the `<Popup>` component. |
+| `toggle`          | `boolean`  | No       | If want to stop making toggle in `<Popup.Button>` and default true.             |
+| `className`       | `string`   | No       | Additional CSS class names for styling purposes.                                |
 
 ## Advanced Usage
 
