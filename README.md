@@ -1,6 +1,6 @@
 # react-popupkit
 
-A lightweight and easy-to-use react component for creating functional popup without managing state or function handling. just call the component, apply your styles, and enjoy optimized magical `popup`.
+A lightweight and easy-to-use react component for creating functional popup without managing state or function handling. Just call the component, apply your styles, and enjoy optimized magical `popup`.
 
 ## Features
 
