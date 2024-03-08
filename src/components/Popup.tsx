@@ -4,6 +4,7 @@ type TPopupProps = {
   children: ReactNode
   isOpen?: boolean
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>
+  className?: string
   [x: string]: any
 }
 
@@ -11,11 +12,13 @@ type TPopupButtonProps = {
   children: ReactNode | string
   onClick?: (e?: HTMLButtonElement) => void
   toggle?: boolean
+  className?: string
   [x: string]: any
 }
 
 type TPopupBody = {
   children: ReactNode
+  className?: string
   [x: string]: any
 }
 
@@ -77,7 +80,7 @@ const Popup = ({ children, isOpen, setIsOpen, ...args }: TPopupProps) => {
   }
   return (
     <PopupContext.Provider value={contextValue}>
-      <div {...args} onClick={handleOutsideClose}>
+      <div {...args} onClick={handleOutsideClose} style={{ position: 'relative' }}>
         {children}
       </div>
     </PopupContext.Provider>
