@@ -1,7 +1,7 @@
 {
   "name": "react-popupkit",
-  "version": "1.0.2",
-  "description": "A lightweight and easy-to-use React component for creating functional popups without managing state or function handling. just call the component, apply your styles, and enjoy optimized magical popups.",
+  "version": "1.0.3",
+  "description": "A lightweight and easy-to-use React component for creating functional popups without managing state or function. just call the component, apply your styles, and enjoy optimized magical popups.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
@@ -35,7 +35,8 @@
     "react-popup-kit",
     "react tooltip",
     "react popupkit",
-    "react popup"
+    "react popup",
+    "react-component"
   ],
   "author": "nahid_ahmed",
   "license": "MIT",
