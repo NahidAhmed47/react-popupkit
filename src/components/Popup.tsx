@@ -80,7 +80,7 @@ const Popup = ({ children, isOpen, setIsOpen, ...args }: TPopupProps) => {
   }
   return (
     <PopupContext.Provider value={contextValue}>
-      <div {...args} onClick={handleOutsideClose} style={{ position: 'relative' }}>
+      <div {...args} onClick={handleOutsideClose}>
         {children}
       </div>
     </PopupContext.Provider>
