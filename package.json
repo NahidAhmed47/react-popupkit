@@ -1,6 +1,6 @@
 {
   "name": "react-popupkit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight and easy-to-use React component for creating functional popups without managing state or function. Just call the component, apply your styles, and enjoy optimized magical popups.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
